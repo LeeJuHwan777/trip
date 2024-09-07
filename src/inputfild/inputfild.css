@@ -1,0 +1,64 @@
+.inputfild {
+    display: flex;
+    gap: 1rem;
+    /* 사이즈가 어떻게 되든간에 -50%로 먹음 */
+    transform: translateY(-50%);
+}
+
+.inputfild > * {
+    padding: 0.75rem;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    border: 1px solid #262626;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.inputfild input {
+    flex: 1;
+    background-color: #262626;
+    color: white;
+}
+
+.inputfild input:focus {
+    background-color: #ffffff;
+    color: black;
+}
+
+.inputfild button {
+    padding-right: 2.5rem;
+    background-color: #1e6f9f;
+    color: white;
+    /* 부모격 포지션 */
+    position: relative;
+}
+
+.inputfild button:hover {
+    background-color: #4ea8de;
+}
+
+.inputfild button:focus {
+    transform: translateY(5px);
+    background-color: #012339;
+}
+
+.inputfild button::after {
+    content: "+";
+    display: flex;
+
+    /* + 위치 */
+    justify-content: center;
+    align-items: center;
+
+    /* 자식 포지션 */
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+    /* 가상요소 위치 조정 */
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
